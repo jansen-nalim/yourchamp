@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Champ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <aside>
+        <h1>Gere campeões adequados para seu momento</h1>
+        <p>
+          Informe seu elo atual em <strong>League of Legends</strong>, rota que
+          deseja jogar e classe de campeão.
+        </p>
+      </aside>
+
+      <main>
+        <div class="content-main">
+          <img src="src/images/logo-yourchamp.svg" alt="logo-yourchamp" />
+          <!--<button onclick="logInfromGoogle()" id="login">
+            Faça login com o Google
+          </button>
+        -->
+          <div class="separator">Informe os dados abaixo</div>
+          <div class="form">
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Elo -->
+            <div class="select-custom">
+              <select name="select-elo" id="elo">
+                <option value="ferro">Ferro</option>
+                <option value="bronze">Bronze</option>
+                <option value="prata" selected>Prata</option>
+                <option value="ouro">Ouro</option>
+                <option value="platina">Platina</option>
+                <option value="diamante">Diamante</option>
+              </select>
+            </div>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Champion Class-->
+            <div class="select-custom">
+              <select name="select-class" id="champion-class">
+                <option value="atirador" selected>Atirador</option>
+                <option value="assassino">Assassino</option>
+                <option value="lutador">Lutador</option>
+                <option value="mago">Mago</option>
+                <option value="suporte">Suporte</option>
+                <option value="tanque">Tanque</option>
+              </select>
+            </div>
+
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Routes -->
+            <div class="select-custom">
+              <select name="select-routes" id="routes">
+                <option value="top" selected>Top lane</option>
+                <option value="mid">Mid lane</option>
+                <option value="jungle">Jungle</option>
+                <option value="bot">Bot lane</option>
+              </select>
+            </div>
+          </div>
+          <button onclick="championGenerator()" class="generator-button">
+            Gerar campeão
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> modal -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="content-modal">
+          <h2 id="modal-title"></h2>
+          <p id="modal-paragraph"></p>
+          <a href="#" class="closed" onclick="modalClosed()">Fechar</a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
